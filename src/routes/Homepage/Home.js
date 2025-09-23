@@ -33,7 +33,7 @@ function Home() {
         if (response.status === 404) {
           throw new Error("No Content Found");
         }
-        throw new Error("오늘의 지문 가져오기 실패");
+        throw new Error("오늘의 지문 가져오기 실패했습니다.");
       }
       const data = await response.json();
       console.log("오늘의 지문 가져오기 성공:", data);
