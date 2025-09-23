@@ -20,7 +20,7 @@ function LoginModal({ onClose, onLogin }) {
     setError("");
 
     try {
-      const response = await fetch("https://moonsunpower.com/user/login/", {
+      const response = await fetch("https://api.moonsunpower.com/user/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

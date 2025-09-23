@@ -63,10 +63,13 @@ function SignUp() {
     }
 
     try {
-      const response = await fetch("https://moonsunpower.com/user/signup/", {
-        method: "POST",
-        body: formDataToSend,
-      });
+      const response = await fetch(
+        "https://api.moonsunpower.com/user/signup/",
+        {
+          method: "POST",
+          body: formDataToSend,
+        }
+      );
 
       const result = await response.json();
 

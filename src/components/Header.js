@@ -36,14 +36,17 @@ function Header() {
       };
 
       console.log("보낼 헤더:", headers);
-      const response = await fetch("https://moonsunpower.com/user/profile/", {
-        method: "GET",
-        headers: {
-          headers,
-          Authorization: `Token ${trimmedToken}`,
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://api.moonsunpower.com/user/profile/",
+        {
+          method: "GET",
+          headers: {
+            headers,
+            Authorization: `Token ${trimmedToken}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (!response.ok) throw new Error("프로필 정보를 불러오지 못했습니다.");
 
@@ -52,7 +55,7 @@ function Header() {
 
       if (profileData.profile_image_url) {
         const absoluteImageUrl = profileData.profile_image_url.startsWith("/")
-          ? `https://moonsunpower.com${profileData.profile_image_url}`
+          ? `https://api.moonsunpower.com${profileData.profile_image_url}`
           : profileData.profile_image_url;
 
         setProfileImage(absoluteImageUrl);

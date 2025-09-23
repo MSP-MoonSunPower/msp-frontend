@@ -153,7 +153,7 @@ const Question = () => {
     stopTimer();
 
     try {
-      const response = await fetch("https://moonsunpower.com/ai/words/", {
+      const response = await fetch("https://api.moonsunpower.com/ai/words/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

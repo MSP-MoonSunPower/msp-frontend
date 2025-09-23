@@ -26,7 +26,9 @@ function Home() {
 
   const fetchTodayText = async () => {
     try {
-      const response = await fetch("https://moonsunpower.com/ai/todaytext/");
+      const response = await fetch(
+        "https://api.moonsunpower.com/ai/todaytext/"
+      );
       if (!response.ok) {
         if (response.status === 404) {
           throw new Error("No Content Found");

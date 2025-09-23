@@ -7,7 +7,7 @@ function Select() {
   const API_BASE =
     window.location.hostname === "test.moonsunpower.com"
       ? "https://test.moonsunpower.com"
-      : "https://moonsunpower.com";
+      : "https://api.moonsunpower.com";
 
   const [difficulty, setDifficulty] = useState(null);
   const [topic, setTopic] = useState("");
