@@ -4,10 +4,19 @@ import ClockLoader from "react-spinners/ClockLoader";
 import styles from "./Select.module.css";
 
 function Select() {
-  const API_BASE =
-    window.location.hostname === "test.moonsunpower.com"
-      ? "https://test.moonsunpower.com"
-      : "https://api.moonsunpower.com";
+  // API 유틸리티 함수
+  const createApiCall = (endpoint, params = []) => {
+    const baseUrl =
+      process.env.REACT_APP_API_URL || "https://api.moonsunpower.com";
+    const url = `${baseUrl}${endpoint}/${params.join("/")}`;
+
+    return fetch(url).then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    });
+  };
 
   const [difficulty, setDifficulty] = useState(null);
   const [topic, setTopic] = useState("");
@@ -60,15 +69,11 @@ function Select() {
 
     if (topic) {
       try {
-        const response = await fetch(
-          `${API_BASE}/ai/text/${encodeURIComponent(
-            topic
-          )}/${difficulty}/${selectedLanguage}`
-        );
-        if (!response.ok) {
-          throw new Error("텍스트 가져오기 실패");
-        }
-        const data = await response.json();
+        const data = await createApiCall("/ai/text", [
+          encodeURIComponent(topic),
+          difficulty,
+          selectedLanguage,
+        ]);
         navigate("/Question", {
           state: { passage: data.content, questions: data.questions },
         });
@@ -80,13 +85,10 @@ function Select() {
       }
     } else if (selectedTag) {
       try {
-        const response = await fetch(
-          `${API_BASE}/ai/tagtext/${selectedTag}/${difficulty}`
-        );
-        if (!response.ok) {
-          throw new Error("태그 텍스트 가져오기 실패");
-        }
-        const data = await response.json();
+        const data = await createApiCall("/ai/tagtext", [
+          selectedTag,
+          difficulty,
+        ]);
         navigate("/Question", {
           state: { passage: data.content, questions: data.questions },
         });
@@ -107,19 +109,16 @@ function Select() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${API_BASE}/ai/todaytext/`);
-      if (!response.ok) {
-        if (response.status === 404) {
-          throw new Error("No Content Found");
-        }
-        throw new Error("오늘의 지문 가져오기 실패");
-      }
-      const data = await response.json();
+      const data = await createApiCall("/ai/todaytext");
       navigate("/Question", {
         state: { passage: data.content, questions: data.questions },
       });
     } catch (error) {
-      setError("오늘의 지문을 가져오는데 실패했습니다. 다시 시도해주세요.");
+      if (error.message.includes("404")) {
+        setError("오늘의 지문이 없습니다.");
+      } else {
+        setError("오늘의 지문을 가져오는데 실패했습니다. 다시 시도해주세요.");
+      }
       setIsPopupOpen(true);
     } finally {
       setIsLoading(false);
