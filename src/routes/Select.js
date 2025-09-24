@@ -2,22 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import ClockLoader from "react-spinners/ClockLoader";
 import styles from "./Select.module.css";
+import { createApiCall } from "../utils/api";
 
 function Select() {
-  // API 유틸리티 함수
-  const createApiCall = (endpoint, params = []) => {
-    const baseUrl =
-      process.env.REACT_APP_API_URL || "https://api.moonsunpower.com";
-    const url = `${baseUrl}${endpoint}/${params.join("/")}`;
-
-    return fetch(url).then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    });
-  };
-
   const [difficulty, setDifficulty] = useState(null);
   const [topic, setTopic] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);

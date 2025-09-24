@@ -6,6 +6,7 @@ import yellowLogo from "../../assets/logoYellow.png";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
+import { createApiCall } from "../../utils/api";
 
 function Home() {
   const navigate = useNavigate();
@@ -26,16 +27,7 @@ function Home() {
 
   const fetchTodayText = async () => {
     try {
-      const response = await fetch(
-        "https://api.moonsunpower.com/ai/todaytext/"
-      );
-      if (!response.ok) {
-        if (response.status === 404) {
-          throw new Error("No Content Found");
-        }
-        throw new Error("오늘의 지문 가져오기 실패했습니다.");
-      }
-      const data = await response.json();
+      const data = await createApiCall("/ai/todaytext");
       console.log("오늘의 지문 가져오기 성공:", data);
 
       navigate("/Question", {
