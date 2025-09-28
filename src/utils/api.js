@@ -7,8 +7,8 @@ export const createApiCall = (endpoint, params = []) => {
 
   const url =
     params.length > 0
-      ? `${baseUrl}${endpoint}/${params.join("/")}/`
-      : `${baseUrl}${endpoint}/`;
+      ? `${baseUrl}${endpoint}/${params.join("/")}/` // 파라미터 있는 경우 (태그텍스트, 주제 입력))
+      : `${baseUrl}${endpoint}/`; // 파라미터가 없는 경우 (today text)
 
   return fetch(url, {
     method: "GET",
