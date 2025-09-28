@@ -5,7 +5,7 @@ export const createApiCall = (endpoint, params = []) => {
       ? ""
       : process.env.REACT_APP_API_URL || "https://api.moonsunpower.com";
 
-  const url = `${baseUrl}${endpoint}/${params.join("/")}`;
+  const url = `${baseUrl}${endpoint}/${params.join("/")}/`;
 
   return fetch(url, {
     method: "GET",
