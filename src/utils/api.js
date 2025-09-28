@@ -5,7 +5,10 @@ export const createApiCall = (endpoint, params = []) => {
       ? ""
       : process.env.REACT_APP_API_URL || "https://api.moonsunpower.com";
 
-  const url = `${baseUrl}${endpoint}/${params.join("/")}/`;
+  const url =
+    params.length > 0
+      ? `${baseUrl}${endpoint}/${params.join("/")}/` // 파라미터 있는 경우 (태그텍스트, 주제 입력))
+      : `${baseUrl}${endpoint}/`; // 파라미터가 없는 경우 (today text)
 
   return fetch(url, {
     method: "GET",
