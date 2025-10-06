@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useSearchParams, useNavigate } from "react-router-dom";
 
 const EmailVerify = () => {
@@ -20,11 +19,11 @@ const EmailVerify = () => {
       try {
         const apiUrl =
           process.env.REACT_APP_API_URL || "https://api.moonsunpower.com";
-        const res = await axios.post(
-          `${apiUrl}/user/email-verify/`,
-          { uid, token },
-          { headers: { "Content-Type": "application/json" } }
-        );
+        const res = await fetch(`${apiUrl}/user/email-verify/`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ uid, token }),
+        });
 
         if (res.status === 200) {
           setStatus("이메일 인증 완료!");
