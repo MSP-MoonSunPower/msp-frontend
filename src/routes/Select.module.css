@@ -7,22 +7,22 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .difficultyOptions {
   display: flex;
-  gap: 1px;
-  margin-top: 5px;
+  gap: 0.0625rem;
+  margin-top: 0.3125rem;
 }
 
 .difficultyButton {
   width: 150px;
   height: 60px;
-  font-size: 18px;
+  font-size: 1.125rem;
   border: none;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   transition: all 0.3s ease;
 }
 
@@ -76,21 +76,21 @@
 
 .topicInput {
   width: 500px;
-  padding: 10px;
-  font-size: 1em;
+  padding: 0.625rem;
+  font-size: 1rem;
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: 0.3125rem;
   border: 1px solid #ccc;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   font-family: "NanumSquareNeo";
 }
 
 .tagContainer {
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 1px;
-  margin-bottom: 20px;
+  margin-top: 0.0625rem;
+  margin-bottom: 1.25rem;
   width: 100%;
   justify-content: center;
   cursor: pointer;
@@ -98,10 +98,10 @@
 }
 
 .tag {
-  padding: 15px 20px;
+  padding: 0.9375rem 1.25rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 10px;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   flex: 1;
   max-width: 100px;
   text-align: center;
@@ -124,20 +124,20 @@
 
 .buttons {
   display: flex;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 0.9375rem;
+  margin-top: 1.25rem;
 }
 
 .startButton {
   background: #10b981;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   border: none;
   border-radius: 15px;
-  padding: 15px 0;
+  padding: 0.9375rem 0;
   width: 230px;
   cursor: pointer;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.05rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
   position: relative;
@@ -173,10 +173,10 @@
 .questionButton {
   background: #10b981;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   border: none;
   border-radius: 15px;
-  padding: 15px 0;
+  padding: 0.9375rem 0;
   width: 230px;
   cursor: pointer;
   font-family: "NanumSquareNeo";
@@ -205,14 +205,14 @@
 
 .popupContent {
   background-color: white;
-  padding: 30px;
+  padding: 1.875rem;
   border-radius: 10px;
   text-align: center;
 }
 
 .popupContent button {
-  margin-top: 10px;
-  padding: 5px 10px;
+  margin-top: 0.625rem;
+  padding: 0.3125rem 0.625rem;
   background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
   color: #155724;
   border: none;
@@ -232,18 +232,17 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: -35px;
+  margin-top: -2.1875rem;
 }
 
 .waittext {
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: #333;
   font-weight: bold;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
-/*언어 선택*/
 .languageChoice {
   display: flex;
   gap: 1rem;
@@ -253,7 +252,7 @@
 }
 
 .languageChoice button {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border: 2px solid #dee2e6;
   color: #495057;

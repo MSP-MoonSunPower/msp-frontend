@@ -14,7 +14,7 @@ html {
   max-width: none;
   margin: 0;
   padding: 0 7vw;
-  background: linear-gradient(to bottom right, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   box-sizing: border-box;
 }
 
@@ -27,13 +27,13 @@ html {
   text-align: left;
   min-width: 260px;
   height: 100%;
-  padding-right: 40px;
-  padding-left: 8vw;
-  gap: 22px;
+  padding-right: 1rem;
+  padding-left: 4vw;
+  gap: 1.375rem;
 }
 
 .logoImage {
-  width: 45vw;
+  width: 50vw;
   max-width: 1200px;
   min-width: 400px;
   height: auto;
@@ -56,40 +56,40 @@ html {
 
 .title {
   font-family: "Pretendard Variable", Pretendard, sans-serif;
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   color: #181848;
   font-weight: 800;
   margin-bottom: 0.5rem;
   margin-top: 0;
-  letter-spacing: -1px;
-  line-height: 1.12;
+  letter-spacing: -0.0625rem;
+  line-height: 1.3;
   word-break: keep-all;
 }
 
 .title .highlight {
   background: #ffeaa7;
-  color: #22c55e;
+  color: #181848;
   border-radius: 18px;
-  padding: 0 12px 2px 12px;
-  margin: 0 2px;
+  padding: 0 0.75rem 0.125rem 0.75rem;
+  margin: 0 0.125rem;
   font-weight: 900;
   box-decoration-break: clone;
 }
 
 .description {
   font-size: 1.1rem;
-  color: #888;
+  color: #626262;
   margin-bottom: 0.7rem;
   margin-top: 0;
   font-weight: 400;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.03125rem;
   line-height: 1.5;
 }
 
 .buttonContainer {
   display: flex;
   flex-direction: row;
-  gap: 14px;
+  gap: 0.875rem;
   width: auto;
   justify-content: flex-start;
   margin-top: 0.5rem;
@@ -97,20 +97,20 @@ html {
 
 .startButton,
 .questionButton {
-  background: #10b981;
+  background: #334155;
   color: #fff;
   width: auto;
   min-width: 120px;
-  padding: 13px 32px;
+  padding: 0.8125rem 2rem;
   font-size: 1.05rem;
   border-radius: 32px;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.03125rem;
   outline: none;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.4);
   position: relative;
   overflow: hidden;
 }
@@ -139,15 +139,15 @@ html {
 
 .startButton:hover,
 .questionButton:hover {
-  background: #059669;
-  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  background: #1e293b;
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.5);
   color: #fff;
   transform: translateY(-3px) scale(1.05);
 }
 
 @media (max-width: 1400px) {
   .container {
-    padding: 32px 6vw 24px 6vw;
+    padding: 2rem 6vw 1.5rem 6vw;
   }
   .logoImage {
     width: 50vw;
@@ -155,14 +155,14 @@ html {
     max-width: 600px;
   }
   .leftContainer {
-    padding-right: 20px;
+    padding-right: 1.25rem;
     padding-left: 6vw;
   }
 }
 
 @media (max-width: 1200px) {
   .container {
-    padding: 32px 4vw 24px 4vw;
+    padding: 2rem 4vw 1.5rem 4vw;
   }
   .logoImage {
     width: 45vw;
@@ -170,7 +170,7 @@ html {
     max-width: 500px;
   }
   .leftContainer {
-    padding-right: 15px;
+    padding-right: 0.9375rem;
     padding-left: 4vw;
   }
 }
@@ -178,10 +178,10 @@ html {
 .footer {
   width: 100%;
   text-align: center;
-  padding: 10px 0;
+  padding: 0.625rem 0;
   background-color: #f9f9f9;
   color: #333;
-  font-size: 14px;
+  font-size: 0.875rem;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -206,7 +206,7 @@ html {
   align-items: center;
   min-height: 100vh;
   background: #fdf8f6;
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
 }
 
@@ -214,36 +214,36 @@ html {
   width: 90%;
   max-width: 400px;
   height: auto;
-  margin-bottom: -50px;
+  margin-bottom: -3.125rem;
 }
 
 .mobileContainer .title {
-  font-size: 2.7em;
+  font-size: 2.7rem;
   color: #181848;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   font-weight: 800;
 }
 
 .mobileMessage1 {
   font-size: 1.1rem;
   color: #888;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   line-height: 1.5;
 }
 
 .mobileContainer .buttonContainer {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.9375rem;
   width: 100%;
   max-width: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .mobileContainer .startButton,
 .mobileContainer .questionButton {
   width: 100%;
-  padding: 15px 20px;
+  padding: 0.9375rem 1.25rem;
   font-size: 1.1rem;
   border-radius: 25px;
   border: none;
@@ -253,32 +253,32 @@ html {
 }
 
 .mobileContainer .startButton {
-  background: #4ade80;
+  background: #334155;
   color: white;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.4);
 }
 
 .mobileContainer .startButton:hover {
-  background: #22c55e;
+  background: #1e293b;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.4);
+  box-shadow: 0 6px 20px rgba(30, 41, 59, 0.5);
 }
 
 .mobileContainer .questionButton {
-  background: #4ade80;
+  background: #334155;
   color: white;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.4);
 }
 
 .mobileContainer .questionButton:hover {
-  background: #22c55e;
+  background: #1e293b;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.4);
+  box-shadow: 0 6px 20px rgba(30, 41, 59, 0.5);
 }
 
 .mobileMessage2 {
   font-size: 0.9rem;
   color: #666;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   line-height: 1.4;
 }

@@ -31,21 +31,21 @@
 .imageOverlay {
   position: absolute;
   color: black;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
 }
 
 .nickname {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 0.9375rem;
 }
 
 .redText {
   color: red;
-  margin-top: 8px;
+  margin-top: 0.5rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .noticeContainer {
@@ -56,7 +56,7 @@
 }
 
 .noticeText {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #555;
 }

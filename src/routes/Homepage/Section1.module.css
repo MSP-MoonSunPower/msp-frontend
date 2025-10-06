@@ -1,5 +1,5 @@
 .sectionContainer {
-  margin-top: 0px;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,17 +19,17 @@
 
 .bottomNavButtons {
   position: absolute;
-  bottom: 50px;
-  right: 50px;
+  bottom: 3.125rem;
+  right: 3.125rem;
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .navButton {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   color: #495057;
   border: none;
-  padding: 10px;
+  padding: 0.625rem;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;

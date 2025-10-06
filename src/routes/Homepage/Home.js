@@ -65,15 +65,8 @@ function Home() {
     <div>
       <div className={styles.container}>
         <div className={styles.leftContainer}>
-          <h1 className={styles.title}>
-            Maximize
-            <br />
-            Self
-            <br />
-            Potential
-          </h1>
+          <h1 className={styles.title}>Moon Sun Power</h1>
           <p className={styles.description}>
-            내가 스스로 만들고 풀며 성장하는 힘 <br />
             생성형 AI 기반 NLG를 이용한 개인 맞춤형 문해력 향상 학습 프로그램
           </p>
 
