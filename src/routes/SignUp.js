@@ -74,12 +74,7 @@ function SignUp() {
       const result = await response.json();
 
       if (response.ok) {
-        alert("회원가입이 완료되었습니다!");
-        setSuccess("회원가입이 완료되었습니다!");
-        if (result.token) localStorage.setItem("authToken", result.token);
-        if (result.nickname) localStorage.setItem("nickname", result.nickname);
-        if (result.profile_image)
-          localStorage.setItem("profile_image", result.profile_image);
+        alert("이메일을 확인해주세요!");
         navigate("/");
       } else {
         alert(result.detail || "회원가입 실패");
