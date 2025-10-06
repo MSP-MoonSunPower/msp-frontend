@@ -14,7 +14,7 @@ html {
   max-width: none;
   margin: 0;
   padding: 0 7vw;
-  background: #fdf8f6;
+  background: linear-gradient(to bottom right, #fdfbfb 0%, #ebedee 100%);
   box-sizing: border-box;
 }
 
