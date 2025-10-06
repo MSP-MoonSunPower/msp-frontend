@@ -1,7 +1,7 @@
 .container {
   width: 90%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
   position: relative;
   font-family: "NanumSquareNeo", sans-serif;
 }
@@ -14,12 +14,13 @@
 .passage {
   position: relative;
   flex: 3;
-  padding-right: 50px;
+  padding-right: 3.125rem;
   font-family: "MaruBuri" !important;
 }
+
 .questions {
   flex: 2;
-  padding-left: 10px;
+  padding-left: 0.625rem;
   background-color: rgb(251, 253, 255);
   display: flex;
 }
@@ -27,8 +28,8 @@
 .container::before {
   content: "";
   position: absolute;
-  top: 50px;
-  bottom: 50px;
+  top: 3.125rem;
+  bottom: 3.125rem;
   left: 60%;
   width: 1.5px;
   background-color: #000000;
@@ -39,39 +40,39 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  top: -10px;
-  margin-top: -20px;
-  margin-bottom: -10px;
+  top: -0.625rem;
+  margin-top: -1.25rem;
+  margin-bottom: -0.625rem;
 }
 
 .WordBtn,
 .showPassageButton {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  margin-left: 10px;
+  margin-left: 0.625rem;
   color: #495057;
   transition: all 0.3s ease;
 }
 
 .resetButton {
   font-family: "MaruBuri" !important;
-  padding: 15px;
+  padding: 0.9375rem;
   border-radius: 50px;
-  margin-left: 10px;
+  margin-left: 0.625rem;
   font-weight: bold !important;
-  margin-right: -15px;
+  margin-right: -0.9375rem;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-  color: #155724;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  color: #1e293b;
   transition: all 0.3s ease;
 }
 
 .resetButton:hover {
-  box-shadow: 0 4px 15px rgba(116, 217, 134, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.3);
   transform: translateY(-2px) scale(1.05);
 }
 
@@ -89,9 +90,9 @@
 
 .CloseFullPassageBTN {
   position: absolute;
-  top: 10px;
-  right: 80px;
-  padding: 8px 16px;
+  top: 0.625rem;
+  right: 5rem;
+  padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -107,13 +108,13 @@
 }
 
 .Jimoon {
-  padding-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 15px;
+  padding-top: 0.625rem;
+  margin-right: 0.625rem;
+  margin-bottom: 0.9375rem;
   line-height: 1.6;
-  text-indent: 20px;
+  text-indent: 1.25rem;
   font-family: "MaruBuri" !important;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .option:hover {
@@ -122,31 +123,31 @@
 }
 
 .questions ol {
-  padding-left: 30px;
-  font-size: 17.5px;
+  padding-left: 1.875rem;
+  font-size: 1.09375rem;
   line-height: 1.6;
 }
 
 .submitButton {
   display: block;
   width: 30%;
-  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  background: #334155;
   color: white;
   border: none;
   border-radius: 20px;
-  padding: 10px;
+  padding: 0.625rem;
   cursor: pointer;
   font-size: 1rem;
   margin-left: auto;
   margin-right: 5%;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.3);
 }
 
 .submitButton:hover {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.4);
+  background: #1e293b;
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.4);
   transform: translateY(-3px) scale(1.05);
 }
 
@@ -166,11 +167,11 @@
 }
 
 .checked {
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .notice {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   color: rgb(94, 94, 94);
 }
 
@@ -184,7 +185,7 @@
   border-radius: 10px;
   max-width: 80%;
   min-width: 300px;
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,28 +203,28 @@
 }
 
 .popupTitle {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .popupWarning {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #ff0000;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .popupButtons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 40px;
+  gap: 0.625rem;
+  margin-top: 2.5rem;
 }
 
 .cancelButton,
 .confirmButton {
-  padding: 8px 16px;
-  margin-top: -30px;
+  padding: 0.5rem 1rem;
+  margin-top: -1.875rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -241,15 +242,16 @@
 }
 
 .confirmButton {
-  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  background: #334155;
   color: white;
   transition: all 0.3s ease;
 }
 
 .confirmButton:hover {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: #1e293b;
   transform: translateY(-2px);
 }
+
 .fullPassage {
   position: fixed;
   top: 0;
@@ -257,7 +259,7 @@
   width: 100%;
   height: 100%;
   background-color: white;
-  padding: 20px;
+  padding: 1.25rem;
   overflow: auto;
   z-index: 1000;
 }
@@ -267,16 +269,16 @@
   margin-left: 5%;
   margin-right: 8%;
   line-height: 1.6;
-  text-indent: 20px;
-  margin-top: 50px;
+  text-indent: 1.25rem;
+  margin-top: 3.125rem;
   font-family: "MaruBuri" !important;
 }
 
 .modalContent {
   background-color: #fffde7;
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   max-width: 60%;
   min-width: 300px;
   max-height: 80vh;
@@ -292,8 +294,8 @@
 .modalHeader {
   position: sticky;
   background-color: #fffde7;
-  padding-top: 5px;
-  padding-bottom: 25px;
+  padding-top: 0.3125rem;
+  padding-bottom: 1.5625rem;
   top: 0;
   font-weight: bold;
   text-align: center;
@@ -303,20 +305,20 @@
 
 .wordList {
   list-style: none;
-  padding: 10px;
+  padding: 0.625rem;
   margin: 0;
   flex: 1;
   overflow-y: auto;
 }
 
 .wordItem {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   display: flex;
   align-items: center;
 }
 
 .deleteButton {
-  margin-left: 8px;
+  margin-left: 0.5rem;
   background: none;
   border: none;
   color: #dc3545;
@@ -335,11 +337,11 @@
   border: 2px solid #dee2e6;
   width: 100px;
   height: 30px;
-  font-size: 1em;
+  font-size: 1rem;
   border-radius: 10px;
   cursor: pointer;
   align-self: center;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   transition: all 0.3s ease;
 }
 
@@ -353,25 +355,25 @@
 }
 
 .Timer {
-  font-size: 12px;
-  margin-right: 30px;
+  font-size: 0.75rem;
+  margin-right: 1.875rem;
   position: absolute;
-  top: -10px;
+  top: -0.625rem;
   display: flex;
   align-items: center;
-  right: 30px;
+  right: 1.875rem;
 }
 
 .timerBTN {
   position: absolute;
-  top: 10px;
-  right: -20px;
-  padding: 8px 16px;
+  top: 0.625rem;
+  right: -1.25rem;
+  padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   background: #f8f9fa;
-  margin-left: 10px;
+  margin-left: 0.625rem;
   font-weight: bold;
   color: #495057;
   transition: all 0.3s ease;

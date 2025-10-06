@@ -127,7 +127,7 @@ function Header() {
       className={`${styles.header} ${isHomePage ? styles.homeHeader : ""}`}
     >
       <div className={styles.logoContainer} onClick={handleLogoClick}>
-        <span className={styles.title}>MoonSunPower</span>
+        <span className={styles.title}>MSP</span>
       </div>
       <nav className={styles.nav}>
         <Link to="/mypage" className={styles.navLink}>

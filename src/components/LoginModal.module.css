@@ -13,53 +13,53 @@
 
 .modalContent {
   background: white;
-  padding: 30px;
-  padding-top: 20px;
+  padding: 1.875rem;
+  padding-top: 1.25rem;
   border-radius: 8px;
   width: 300px;
   margin-top: 60px;
-  margin-right: 50px;
+  margin-right: 3.125rem;
   text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .input {
-  padding: 10px;
+  padding: 0.625rem;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
 .loginButton {
   width: 100%;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  margin-top: 0.625rem;
+  padding: 0.625rem 1.25rem;
+  background: #334155;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.3);
 }
 
 .loginButton:hover {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: #1e293b;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.4);
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.4);
 }
 
 .signup {
-  margin-top: 15px;
+  margin-top: 0.9375rem;
   text-align: center;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .signup:hover {

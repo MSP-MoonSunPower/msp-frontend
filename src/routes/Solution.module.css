@@ -1,7 +1,7 @@
 .container {
   max-width: 90%;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 2.5rem auto;
+  padding: 1.25rem;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -10,8 +10,8 @@
 
 .header {
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 24px;
+  margin-bottom: 1.875rem;
+  font-size: 1.5rem;
   color: #333;
   font-family: "NanumSquareNeoBold" !important;
   font-weight: bolder;
@@ -19,11 +19,11 @@
 
 .passage {
   width: 96%;
-  margin: 10px auto;
+  margin: 0.625rem auto;
   border: 1px solid #ddd;
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   background-color: #fafafa;
   color: #171717;
@@ -33,23 +33,23 @@
 .splitContainer {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .answers {
   width: 48%;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .vocabulary {
   width: 48%;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .vocabulary h2 {
   color: #ff5f5f;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   font-family: "MaruBuri";
 }
 
@@ -57,14 +57,14 @@
   padding: 0;
   list-style: decimal;
   text-align: left;
-  margin-left: 20px;
-  font-size: 16px;
+  margin-left: 1.25rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
 .wordItem {
   color: #000000;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .word {
@@ -78,7 +78,7 @@
 }
 
 .questionItem {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
 .questionItem p {
@@ -88,28 +88,28 @@
 .choices {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 0.625rem;
+  margin-top: 0.625rem;
 }
 
 .choice {
-  padding: 10px;
+  padding: 0.625rem;
   border-radius: 5px;
   background-color: #f5f5f5;
   transition: all 0.3s;
 }
 
 .correctChoice {
-  border: 2px solid #22c55e;
-  color: #155724;
-  background-color: #d4edda;
+  border: 2px solid #334155;
+  color: #1e293b;
+  background-color: #e2e8f0;
   font-weight: bold;
 }
 
 .correctSelected {
-  border: 2.5px solid #16a34a;
-  background-color: #c3e6cb;
-  color: #0f5132;
+  border: 2.5px solid #334155;
+  background-color: #cbd5e1;
+  color: #1e293b;
   font-weight: bold;
 }
 
@@ -121,10 +121,10 @@
 }
 
 .explanation {
-  margin-top: 15px;
-  font-size: 15px;
-  color: #22c55e;
-  text-indent: 10px;
+  margin-top: 0.9375rem;
+  font-size: 0.9375rem;
+  color: #334155;
+  text-indent: 0.625rem;
   font-weight: bold;
 }
 
@@ -136,17 +136,17 @@
 
 .startButton {
   display: block;
-  margin: 40px auto 0;
-  background: #10b981;
+  margin: 2.5rem auto 0;
+  background: #334155;
   color: white;
   width: 90%;
   border: none;
-  padding: 15px 30px;
-  font-size: 1em;
+  padding: 0.9375rem 1.875rem;
+  font-size: 1rem;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -168,8 +168,8 @@
 }
 
 .startButton:hover {
-  background: #059669;
-  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  background: #1e293b;
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.4);
   transform: translateY(-3px) scale(1.05);
 }
 

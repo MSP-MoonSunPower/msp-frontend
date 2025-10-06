@@ -16,6 +16,16 @@ function Select() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    // body 배경색 설정
+    document.body.style.background =
+      "linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%)";
+    document.body.style.minHeight = "100vh";
+
+    return () => {
+      // cleanup
+      document.body.style.background = "";
+      document.body.style.minHeight = "";
+    };
   }, []);
 
   useEffect(() => {
@@ -30,9 +40,7 @@ function Select() {
 
   const handleTopicChange = (e) => {
     setTopic(e.target.value);
-    if (e.target.value) {
-      setSelectedTag(null);
-    }
+    setSelectedTag(null);
   };
 
   const handleTagClick = (tagNumber) => {
@@ -115,7 +123,7 @@ function Select() {
   if (isLoading) {
     return (
       <div className={styles.loadingContainer}>
-        <ClockLoader color="black" size={80} />
+        <ClockLoader color="#334155" size={80} />
         <p className={styles.waittext}>
           지문이 생성되고 있습니다. 잠시만 기다려주세요!
         </p>
@@ -174,11 +182,10 @@ function Select() {
         placeholder="원하는 주제를 입력해주세요. (ex. 옥토버페스트)"
         value={topic}
         onChange={handleTopicChange}
-        disabled={!!selectedTag}
       />
 
       {selectedLanguage === "korean" && (
-        <>
+        <div className={styles.tagSection}>
           <h3>원하는 주제가 없으신가요?</h3>
           <div className={styles.tagContainer}>
             {[
@@ -194,22 +201,13 @@ function Select() {
                 className={`${styles.tag} ${
                   selectedTag === tag.number ? styles.selectedTag : ""
                 }`}
-                onClick={() => {
-                  if (selectedLanguage === "korean" && !topic) {
-                    handleTagClick(tag.number);
-                  }
-                }}
-                style={{
-                  pointerEvents:
-                    selectedLanguage !== "korean" || topic ? "none" : "auto",
-                  opacity: selectedLanguage !== "korean" || topic ? 0 : 1,
-                }}
+                onClick={() => handleTagClick(tag.number)}
               >
                 {tag.label}
               </span>
             ))}
           </div>
-        </>
+        </div>
       )}
 
       <div className={styles.buttons}>
