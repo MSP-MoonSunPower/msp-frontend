@@ -13,6 +13,7 @@ import Question from "./routes/Question";
 import Select from "./routes/Select";
 import Solution from "./routes/Solution";
 import SignUp from "./routes/SignUp";
+import EmailVerify from "./routes/EmailVerify";
 import "pretendard/dist/web/variable/pretendardvariable.css";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path="/Select" element={<Select />} />
           <Route path="/Solution" element={<Solution />} />
           <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/verify-email" element={<EmailVerify />} />
         </Routes>
       </main>
     </>
