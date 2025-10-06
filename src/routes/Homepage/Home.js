@@ -93,9 +93,9 @@ function Home() {
           <img src={mainImg} alt="MSP Logo" className={styles.logoImage} />
         </div>
       </div>
-
-      <Section1 />
       <Section2 />
+      <Section1 />
+
       <Section3 />
 
       <footer className={styles.footer}>
