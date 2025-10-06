@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";
 import styles from "./Section3.module.css";
-import { ScrollAnimation } from "@lasbe/react-scroll-animation";
 
 const questions = [
   {
     id: "q1",
+    icon: "📝",
     question: "지문의 출처를 알 수 있을까요?",
     answer: `지문과 문제는 주제가 입력됨과 동시에 생성형 AI를 활용하여 즉시 생성됩니다.
 비결정적인 방법을 따르므로, 같은 주제를 입력하더라도 서로 다른 지문과 문제가 제공될 수 있습니다.
@@ -17,6 +18,7 @@ const questions = [
   },
   {
     id: "q2",
+    icon: "📊",
     question: "난이도는 어떻게 되나요?",
     answer: `초급 : 초등학교 저학년 학생들도 부담 없이 읽을 수 있도록, 쉬운 단어와 짧은 글로 구성되어 있습니다!
 중급 : 초등학교 고학년부터 중학생 수준의 지문으로, 초급보다 글의 길이가 조금 더 길어집니다.
@@ -26,6 +28,7 @@ const questions = [
   },
   {
     id: "q3",
+    icon: "📅",
     question: "오늘의 지문은 무엇인가요?",
     answer: `오늘의 지문은 매일 자정에 업데이트되며, 난이도는 '지옥'으로 고정됩니다.
 주제는 랜덤으로 선정되어, 매일 다양한 내용을 접하며 학습할 수 있도록 구성되었습니다. 
@@ -33,6 +36,7 @@ const questions = [
   },
   {
     id: "q4",
+    icon: "🤝",
     question: "서비스 방침은 어떤가요?",
     answer: `전 세계, 남녀노소 모두를 위한 웹사이트인 만큼, 아무도 차별받지 않는 모두가 행복한 사이트이길 바랍니다.
 저희 MoonSunPower는 중립적이고 객관적인 정보로 여러분들을 맞이하고 싶습니다.
@@ -40,6 +44,7 @@ const questions = [
   },
   {
     id: "q5",
+    icon: "💎",
     question: "무료 서비스인가요?",
     answer: `구독 시 초급, 중급, 고급, 지옥 네 가지 레벨을 모두 학습하실 수 있습니다.
 또한, 오답노트 기능이 활성화되어 복습이 더욱 효과적으로 이루어집니다. 
@@ -51,56 +56,99 @@ const Section3 = () => {
   const [openItem, setOpenItem] = useState(null);
 
   return (
-    <ScrollAnimation
-      animateIn="fadeInUp"
-      animateOnce={false}
-      duration={1.5}
-      initiallyVisible={false}
+    <motion.section
+      className={styles.container}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8 }}
     >
-      <div className={styles.container}>
-        <div className={styles.card}>
-          <h2 className={styles.title}> 📌 자주 묻는 질문</h2>
-          <Accordion.Root
-            type="single"
-            collapsible
-            className={styles.accordion}
-          >
-            {questions.map((q) => (
-              <Accordion.Item
-                key={q.id}
-                value={q.id}
-                className={styles.item}
-                onClick={() => setOpenItem(openItem === q.id ? null : q.id)}
-              >
+      <motion.div
+        className={styles.header}
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className={styles.badge}>💡 FAQ</div>
+        <h2 className={styles.mainTitle}>자주 묻는 질문</h2>
+        <p className={styles.mainDesc}>MSP에 대해 궁금한 점이 있으신가요?</p>
+      </motion.div>
+
+      <motion.div
+        className={styles.card}
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <Accordion.Root
+          type="single"
+          collapsible
+          className={styles.accordion}
+          value={openItem}
+          onValueChange={setOpenItem}
+        >
+          {questions.map((q, index) => (
+            <motion.div
+              key={q.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Accordion.Item value={q.id} className={styles.item}>
                 <Accordion.Header>
                   <Accordion.Trigger className={styles.trigger}>
-                    <div className={styles.iconText}>
-                      <span className={styles.icon}>💡</span> {q.question}
+                    <div className={styles.questionContent}>
+                      <span className={styles.iconWrapper}>{q.icon}</span>
+                      <span className={styles.questionText}>{q.question}</span>
                     </div>
-                    <ChevronDown
-                      className={`${styles.chevron} ${
-                        openItem === q.id ? styles.rotate : ""
-                      }`}
-                    />
+                    <motion.div
+                      animate={{ rotate: openItem === q.id ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ChevronDown className={styles.chevron} />
+                    </motion.div>
                   </Accordion.Trigger>
                 </Accordion.Header>
                 <Accordion.Content className={styles.content}>
                   <div
+                    className={styles.answerText}
                     dangerouslySetInnerHTML={{
                       __html: q.answer.replace(/\n/g, "<br>"),
                     }}
                   />
                 </Accordion.Content>
               </Accordion.Item>
-            ))}
-          </Accordion.Root>
-        </div>
+            </motion.div>
+          ))}
+        </Accordion.Root>
+      </motion.div>
 
+      <motion.div
+        className={styles.ctaSection}
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <h3 className={styles.ctaTitle}>지금 바로 시작하세요</h3>
+        <p className={styles.ctaDesc}>
+          AI가 만드는 나만의 학습, 지금 무료로 체험해보세요
+        </p>
         <Link to="/select">
-          <button className={styles.startButton}> MSP 시작하러 가기 📖 </button>
+          <motion.button
+            className={styles.startButton}
+            whileHover={{ scale: 1.05, y: -3 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span>MSP 시작하기</span>
+            <span className={styles.arrow}>→</span>
+          </motion.button>
         </Link>
-      </div>
-    </ScrollAnimation>
+      </motion.div>
+    </motion.section>
   );
 };
 

@@ -66,13 +66,13 @@
   margin-right: -0.9375rem;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-  color: #155724;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  color: #1e293b;
   transition: all 0.3s ease;
 }
 
 .resetButton:hover {
-  box-shadow: 0 4px 15px rgba(116, 217, 134, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.3);
   transform: translateY(-2px) scale(1.05);
 }
 
@@ -131,7 +131,7 @@
 .submitButton {
   display: block;
   width: 30%;
-  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  background: #334155;
   color: white;
   border: none;
   border-radius: 20px;
@@ -142,12 +142,12 @@
   margin-right: 5%;
   margin-top: 1.25rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.3);
 }
 
 .submitButton:hover {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.4);
+  background: #1e293b;
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.4);
   transform: translateY(-3px) scale(1.05);
 }
 
@@ -242,13 +242,13 @@
 }
 
 .confirmButton {
-  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  background: #334155;
   color: white;
   transition: all 0.3s ease;
 }
 
 .confirmButton:hover {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: #1e293b;
   transform: translateY(-2px);
 }
 

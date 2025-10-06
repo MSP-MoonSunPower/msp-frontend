@@ -100,16 +100,16 @@
 }
 
 .correctChoice {
-  border: 2px solid #22c55e;
-  color: #155724;
-  background-color: #d4edda;
+  border: 2px solid #334155;
+  color: #1e293b;
+  background-color: #e2e8f0;
   font-weight: bold;
 }
 
 .correctSelected {
-  border: 2.5px solid #16a34a;
-  background-color: #c3e6cb;
-  color: #0f5132;
+  border: 2.5px solid #334155;
+  background-color: #cbd5e1;
+  color: #1e293b;
   font-weight: bold;
 }
 
@@ -123,7 +123,7 @@
 .explanation {
   margin-top: 0.9375rem;
   font-size: 0.9375rem;
-  color: #22c55e;
+  color: #334155;
   text-indent: 0.625rem;
   font-weight: bold;
 }
@@ -137,7 +137,7 @@
 .startButton {
   display: block;
   margin: 2.5rem auto 0;
-  background: #10b981;
+  background: #334155;
   color: white;
   width: 90%;
   border: none;
@@ -146,7 +146,7 @@
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -168,8 +168,8 @@
 }
 
 .startButton:hover {
-  background: #059669;
-  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  background: #1e293b;
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.4);
   transform: translateY(-3px) scale(1.05);
 }
 

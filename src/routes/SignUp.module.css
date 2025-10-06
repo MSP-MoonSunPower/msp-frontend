@@ -112,7 +112,7 @@
 .submitButton {
   width: 100%;
   padding: 0.75rem;
-  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  background: #334155;
   border: none;
   border-radius: 12px;
   color: #fff;
@@ -120,13 +120,13 @@
   margin-top: 1.25rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.3);
 }
 
 .submitButton:hover {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: #1e293b;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.4);
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.4);
 }
 
 .modal {
@@ -184,7 +184,7 @@
 }
 
 .modalContent button {
-  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  background: #334155;
   color: white;
   border: none;
   padding: 0.625rem 1.25rem;
@@ -194,13 +194,13 @@
   transition: all 0.3s ease;
   flex: 1;
   margin: 0 0.3125rem;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.3);
 }
 
 .modalContent button:hover {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: #1e293b;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.4);
+  box-shadow: 0 8px 25px rgba(30, 41, 59, 0.4);
 }
 
 .modalContent .cancelButton {
