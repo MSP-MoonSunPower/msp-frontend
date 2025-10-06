@@ -18,16 +18,18 @@ const EmailVerify = () => {
 
     const verifyEmail = async () => {
       try {
+        const apiUrl =
+          process.env.REACT_APP_API_URL || "https://api.moonsunpower.com";
         const res = await axios.post(
-          "https://api.moonsunpower.com/user/email-verify/",
+          `${apiUrl}/user/email-verify/`,
           { uid, token },
           { headers: { "Content-Type": "application/json" } }
         );
 
         if (res.status === 200) {
-          setStatus("이메일 인증이 완료되었습니다!");
+          setStatus("이메일 인증 완료!");
           setTimeout(() => {
-            navigate("/");
+            window.location.href = "/login";
           }, 1500);
         } else {
           setStatus("이메일 인증에 실패했습니다.");
