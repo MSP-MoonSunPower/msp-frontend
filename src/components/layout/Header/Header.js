@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
-import LoginModal from "./LoginModal";
-import yellowLogo from "../assets/logoYellow.png";
+import LoginModal from "../../modals/LoginModal/LoginModal";
+import yellowLogo from "../../../assets/images/logoYellow.png";
 
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

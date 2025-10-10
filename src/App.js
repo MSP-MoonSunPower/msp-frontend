@@ -5,15 +5,15 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./routes/Homepage/Home";
-import MyPage from "./routes/MyPage";
-import AboutUs from "./routes/AboutUs";
-import Question from "./routes/Question";
-import Select from "./routes/Select";
-import Solution from "./routes/Solution";
-import SignUp from "./routes/SignUp";
-import EmailVerify from "./routes/EmailVerify";
+import Header from "./components/layout/Header/Header";
+import Home from "./pages/Homepage/Home";
+import MyPage from "./pages/MyPage";
+import AboutUs from "./pages/AboutUs";
+import Question from "./pages/Question";
+import Select from "./pages/Select";
+import Solution from "./pages/Solution";
+import SignUp from "./pages/SignUp";
+import EmailVerify from "./pages/EmailVerify";
 import "pretendard/dist/web/variable/pretendardvariable.css";
 
 function App() {
