@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import ClockLoader from "react-spinners/ClockLoader";
 import styles from "./Select.module.css";
-import { createApiCall } from "../utils/api";
+import { createApiCall } from "../api";
 
 function Select() {
   const [difficulty, setDifficulty] = useState(null);

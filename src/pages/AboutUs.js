@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./AboutUs.module.css";
-import sj from "../assets/sj.jpg";
-import hwan from "../assets/hwan.jpg";
-import sm from "../assets/seungmin.png";
-import sb from "../assets/sebin.jpg";
-import yj from "../assets/yj.jpg";
+import sj from "../assets/images/sj.jpg";
+import hwan from "../assets/images/hwan.jpg";
+import sm from "../assets/images/seungmin.png";
+import sb from "../assets/images/sebin.jpg";
+import yj from "../assets/images/yj.jpg";
 
 function AboutUs() {
   const teamSections = [

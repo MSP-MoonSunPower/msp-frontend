@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
-import LoginModal from "./LoginModal";
-import yellowLogo from "../assets/logoYellow.png";
+import LoginModal from "../../modals/LoginModal/LoginModal";
+import yellowLogo from "../../../assets/images/logoYellow.png";
 
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -130,13 +130,10 @@ function Header() {
         <span className={styles.title}>MSP</span>
       </div>
       <nav className={styles.nav}>
-        <Link to="/mypage" className={styles.navLink}>
-          My Page
-        </Link>
         <Link to="/aboutus" className={styles.navLink}>
           About Us
         </Link>
-
+        {/* 
         {isLoggedIn ? (
           <div className={styles.profileSection}>
             <button onClick={handleLogout} className={styles.logoutLink}>
@@ -165,7 +162,7 @@ function Header() {
           <button onClick={handleModalOpen} className={styles.navLink}>
             Login
           </button>
-        )}
+        )} */}
       </nav>
 
       {isModalOpen && (

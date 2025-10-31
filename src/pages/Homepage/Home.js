@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./Home.module.css";
-import mainImg from "../../assets/mainMacImg.png";
+import mainImg from "../../assets/images/mainMacImg.png";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
-import { createApiCall } from "../../utils/api";
+import { createApiCall } from "../../api";
 
 function Home() {
   const navigate = useNavigate();
