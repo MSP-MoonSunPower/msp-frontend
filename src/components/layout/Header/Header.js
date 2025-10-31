@@ -133,6 +133,36 @@ function Header() {
         <Link to="/aboutus" className={styles.navLink}>
           About Us
         </Link>
+        {/* 
+        {isLoggedIn ? (
+          <div className={styles.profileSection}>
+            <button onClick={handleLogout} className={styles.logoutLink}>
+              Log out
+            </button>
+            <span className={styles.nickname}>{nickname || "사용자 "} 님</span>
+            {profileImage ? (
+              <img
+                src={profileImage}
+                alt="프로필"
+                className={styles.profileImage}
+                onError={(e) => {
+                  console.error("프로필 이미지 로드 실패:", profileImage);
+                  e.target.src = "/default-profile.png";
+                }}
+              />
+            ) : (
+              <img
+                src="/default-profile.png"
+                alt="기본 프로필"
+                className={styles.profileImage}
+              />
+            )}
+          </div>
+        ) : (
+          <button onClick={handleModalOpen} className={styles.navLink}>
+            Login
+          </button>
+        )} */}
       </nav>
 
       {isModalOpen && (
