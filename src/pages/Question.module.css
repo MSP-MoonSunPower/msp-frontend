@@ -122,10 +122,21 @@
   cursor: pointer;
 }
 
+.option:hover label,
+.option:hover .checked {
+  color: rgb(255, 165, 20);
+}
+
 .questions ol {
   padding-left: 1.875rem;
   font-size: 1.09375rem;
   line-height: 1.6;
+  list-style: decimal;
+}
+
+.questions li {
+  list-style: decimal;
+  margin-bottom: 1.25rem;
 }
 
 .submitButton {
