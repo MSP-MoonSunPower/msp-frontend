@@ -99,7 +99,6 @@ function Home() {
 
   return (
     <div className={styles.wrapper}>
-      {/* 스크롤 프로그레스 바 */}
       <motion.div
         className={styles.progressBar}
         style={{ scaleX: scrollYProgress }}
@@ -112,14 +111,9 @@ function Home() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.div
-            className={styles.badge}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            ✨ AI 기반 학습
-          </motion.div>
+          <div className={styles.badge}>
+            MSP는 누구에게나 열려 있는, 무료 학습 커뮤니티입니다.
+          </div>
 
           <motion.h1
             className={styles.title}
